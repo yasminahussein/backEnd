@@ -1,0 +1,51 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+
+<html lang="zxx">
+    <head>
+    <title>Opiniony</title>
+    <meta charset="utf-8">
+<script>  
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+
+</script>
+</head>
+<body data-spy="scroll" data-target=".fixed-top" >
+    <img id='bkgd' src="../1631701569-your-opinion-matters-on-brick-260nw-1817088941.jpeg" style="height: 95%; width: 70%;position: absolute;z-index: -1; opacity: .9;" align="left">
+    <!--------------------- Main Content ------------------->
+			<div class="box1"  align="center">
+                <h1> Evaluate The Review </h1>
+                <form action="rate.php" method="post" align="center">
+                    <label for="vol">Rate the review (from 0 to 10):</label>
+                    <input type="range" name="rate" value="vol" min="0" max="10" step="1">
+                    <input type="hidden" name="postid" value="<?php echo $_GET['postid']; ?>">
+                    <input type="submit" name="myrate" value="Done">
+                </form>
+	     </div>
+    <!--------------------- End Main Content ----------------------------------->
+        
+    <form action="../about.html"  > 
+    <input type="submit" value="About">
+    </form>
+    <form action="../404.html" > 
+    <input type="submit" value="Support">
+    </form> 
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+</body>
+</html>
